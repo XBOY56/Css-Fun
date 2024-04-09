@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.navbar {
+  height: 70px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  background-color: #000000;
+  color: #fff;
+  justify-content: space-evenly;
+  align-items: center;
+}
+nav ul {
+  margin: auto;
+}
+nav ul li {
+  display: inline-block;
+  margin-left:10px ;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 30px;
+}
+.logo {
+  font-size: 60px;
+}
+.section {
+  height: 70vh;
+  padding-left: 30px;
+  position: relative;
+  border: red solid 1px;
+  margin-top: 5%;
+}
+.section h1 {
+  font-size: 70px;
+  /* margin-bottom: 20px; */
+}
+
+p {
+  border-radius: 10px;
+  border: blue 2px solid;
+  width: fit-content;
+  padding: 2px;
+  box-shadow: 1px 1px 7px 7px;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.jump {
+  transition: transform 0.3s;
+  width: 100px;
+  border-radius: 50%;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+  top: 320px;
+  left: 47%;
+}
+p:hover {
+  cursor: pointer;
+}
+.high:hover ~ .jump {
+  animation-name: myAnim1;
+  animation-duration: 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.hger:hover ~ .jump {
+  animation-name: myAnim2;
+  /* animation-timing-function: ease-in-out; */
+  animation-duration: 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+.vhigh:hover ~ .jump {
+  animation-name: myAnim3;
+  animation-duration: 0.7s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes myAnim1 {
+  to {
+    top: 300px;
+  }
+}
+@keyframes myAnim2 {
+  to {
+    top: 250px;
+  }
+}
+@keyframes myAnim3 {
+  to {
+    top: 50px;
+  }
+}
+
+.high:hover {
+  background-color: blue;
+}
+.hger:hover {
+  background-color: red;
+}
+.vhigh:hover {
+  background-color: yellow;
+}
